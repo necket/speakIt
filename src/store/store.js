@@ -11,6 +11,8 @@ class Store{
         
         getWords(page, group).then(data => {
             this.words = data;
+        }).catch((e) => {
+            console.log(e);
         }).then(() => {
             this.loading = false;
         });

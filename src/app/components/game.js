@@ -29,8 +29,7 @@ Store.getWords(getRandomInt(29), 0); // because API have 29 pages with words
     }
 
     selectItem = (id) => {
-        console.log(id)
-     
+        
         this.currentWord = this.words[id];
 
         this.image();
