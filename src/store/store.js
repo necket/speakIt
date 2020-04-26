@@ -1,5 +1,5 @@
 import {observable, action} from 'mobx';
-import getWords from '~/api/words.js'
+import getWords from '~/api/getWords.js';
 
 class Store{
     words = [];

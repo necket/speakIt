@@ -1,12 +1,14 @@
 import React from 'react';
 import {observer} from 'mobx-react';
 import Store from '~/store/store.js';
-import getRandomInt from './helpers/random.js'
+import getRandomInt from './helpers/random.js';
 
 @observer class Switch extends React.Component {
 
     switch(id){
         Store.getWords(getRandomInt(29), id);
+
+        document.querySelector('#img').src = './dist/img/blank.jpg';
 
         [...(document.querySelectorAll('.point'))].map(el =>
             el.id === 'point-' + id ? 
