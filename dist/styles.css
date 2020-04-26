@@ -1,0 +1,151 @@
+#app{
+    padding: 30px 0;
+}
+a:hover {
+    text-decoration: none;
+}
+::selection {
+    background: none;
+}
+
+/*--------------Loader---------------*/
+.loader-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #414141;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*--------------Switch--------------*/
+.points {
+    list-style: none;
+    display: flex;
+    padding: 15px 15px;
+    margin: 0;
+}
+.point {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    margin-top: -10px;
+    border-radius: 50%;
+    background-color: #00c49d;
+    background: radial-gradient(#00c49d 0%, #00c49d 50%, #ffffff 50%, #ffffff 100%);
+    margin-right: 10px;  
+    box-shadow: 0 0 0 2px #ffffff;
+    cursor: pointer;
+    transition: .5s;
+}
+.point:hover {
+    box-shadow: inset 0 0 0 2px #ffffff, inset 0 0 0 3px #00c49d;
+}
+.point::before {
+    content: "";
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    background-color: #00c49d;
+}
+.point:nth-child(1)::before {
+    display: none;
+}
+.point-active,
+.point-active:hover {
+    box-shadow: 0 0 0 2px #00c49d, 
+                inset 0 0 0 2px #ffffff,
+                inset 0 0 0 3px #00c49d;
+}
+
+/*----------------------------------*/
+
+.static {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.static img{
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    max-width: 300px;
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 5px;
+}
+
+/*----------------------------------*/
+
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 1.4;
+    width: 100%;
+    min-height: 70px;
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 5px;
+    background-color: #fff;
+    transition: .3s;
+}
+
+.item:hover {
+    box-shadow: 0 0 0 1px rgba(255,255,255,.1), 0 2px 4px 0 rgba(14,30,37,.12);
+}
+
+.item-active {
+    border: 1px solid rgb(0, 173, 159);
+    background-color: rgba(0, 173, 159, .15);
+}
+
+.word, .translation {
+    color: #0e1e25;
+    font-size: 22px;
+    padding: 0px 5px;
+    margin: 0;
+}
+
+.transcription {
+    color: rgba(14, 30, 37, .7);
+    font-size: 18px;
+    padding: 0px 5px;
+    margin: 0;
+}
+
+.audio-icon {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.audio-icon img {
+    width: 20px;
+    height: 20px;
+    color: rgba(14, 30, 37, .7);
+}
