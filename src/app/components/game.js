@@ -57,8 +57,8 @@ Store.getWords(getRandomInt(29), 0); // because API have 29 pages with words
         }
         
         return (<>
-            <div className="row">
-                <div className="col">
+            <div className="row justify-content-center">
+                <div className="col-12 col-md-6 col-lg-3">
                     <div className="static">
                         <img src="./dist/img/blank.jpg" alt="blank" id="img" className="img-fluid"/>
                     </div>
