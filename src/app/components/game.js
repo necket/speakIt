@@ -18,14 +18,14 @@ Store.getWords(getRandomInt(29), 0); // because API have 29 pages with words
 
     image(){
         let img = document.querySelector('#img');
-        let root = 'https://raw.githubusercontent.com/irinainina/rslang-data/master/data/';
-        img.src = root + this.currentWord['image'].split('/')[1];
+        let root = 'https://raw.githubusercontent.com/necket/rslang-data/master/';
+        img.src = root + this.currentWord['image'];
     }
 
     speech(){
         let audio = document.querySelector('#audio');
-        let root = 'https://raw.githubusercontent.com/irinainina/rslang-data/master/data/';
-        audio.src = root + this.currentWord['audio'].split('/')[1];
+        let root = 'https://raw.githubusercontent.com/necket/rslang-data/master/';
+        audio.src = root + this.currentWord['audio'];
     }
 
     selectItem = (id) => {
